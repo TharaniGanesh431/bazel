@@ -1,0 +1,16 @@
+{
+  "flow-definition": {
+    "plugin": "workflow-job@1360.vc6700e3136f5",
+    "description": null,
+    "keepDependencies": "false",
+    "properties": null,
+    "definition": {
+      "class": "org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition",
+      "plugin": "workflow-cps@3806.va_3a_6988277b_2",
+      "script": "pipeline {\n    agent any\n    stages {\n        stage('GITHUB out') {\n            steps {\n              withCredentials([string(credentialsId: 'GitHub_Token', variable: 'github_token')]) {\n                checkout([$class: 'GitSCM',\n                          branches: [[name: '*/master']],\n                                extensions: [[$class: 'CleanCheckout']],\n                                userRemoteConfigs: [[url: 'REDACTED431/Trade_Analysis_SENA.git']]\n                       ])\n              }\n            }\n        }\n        stage('Build') {\n            steps {\n                sh \"mvn -Dmaven.test.failure.ignore=true clean package\"\n            }\n        }\n        stage('Push artifacts into artifactory') {\n            steps {\n              rtUpload (\n                serverId: 'my-artifactory',\n                spec: '''{\n                      \"files\": [\n                        {\n                          \"pattern\": \"*.war\",\n                          \"target\": \"example-repo-local/build-files/\"\n                        }\n                    ]\n                }'''\n              )\n          }\n        }\n        stage('Pull artifacts & deploy') {\n            steps{\n                  withCredentials([usernamePassword(credentialsId: 'my-artifactory-cred',\n                                      usernameVariable: 'USERNAME',\n                                      passwordVariable: 'PASSWORD')]) {\n                    sh 'ssh ubuntu@149.158.89.34 curl -u ' + USERNAME + ':' + PASSWORD + ' -X GET \"Your_JFrog_Artifactory_URL_of_file\" --output /opt/tomcat9/webapps/deploy.war'\n            }\n          }\n       }\n    }\n}",
+      "sandbox": "true"
+    },
+    "triggers": null,
+    "disabled": "false"
+  }
+}

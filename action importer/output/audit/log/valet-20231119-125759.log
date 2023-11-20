@@ -1,0 +1,62 @@
+# Logfile created on 2023-11-19 12:57:59 +0000 by logger.rb/v1.5.3
+I, [2023-11-19T12:57:59.039915 #1]  INFO -- : Using GitHub Features: Defaults
+I, [2023-11-19T12:57:59.039969 #1]  INFO -- : Auditing 'REDACTED:8080/'
+I, [2023-11-19T12:57:59.051612 #1]  INFO -- request: GET REDACTED:8080/api/json?tree=jobs%5Bname%2Curl%2CfullName%5D
+I, [2023-11-19T12:57:59.198632 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:57:59.200862 #1]  INFO -- : Thread collection size: 8
+I, [2023-11-19T12:57:59.204669 #1]  INFO -- request: GET REDACTED:8080/job/Build/config.xml
+I, [2023-11-19T12:57:59.205879 #1]  INFO -- request: GET REDACTED:8080/job/Deploy/config.xml
+I, [2023-11-19T12:57:59.207104 #1]  INFO -- request: GET REDACTED:8080/job/Hello%20World/config.xml
+I, [2023-11-19T12:57:59.239005 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:57:59.262558 #1]  INFO -- request: POST REDACTED:8080/pipeline-model-converter/toJson
+I, [2023-11-19T12:57:59.547660 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:57:59.557834 #1]  INFO -- request: POST REDACTED:8080/pipeline-model-converter/toJson
+I, [2023-11-19T12:57:59.558654 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:57:59.563609 #1]  INFO -- request: POST REDACTED:8080/pipeline-model-converter/toJson
+I, [2023-11-19T12:58:00.558189 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:58:00.718880 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:58:00.722972 #1]  INFO -- response: Status 200
+D, [2023-11-19T12:58:00.727189 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Defaults]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.727379 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.727498 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.728336 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Container]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.730715 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'git'
+D, [2023-11-19T12:58:00.733310 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'sh'
+D, [2023-11-19T12:58:00.733672 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'junit'
+D, [2023-11-19T12:58:00.734660 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'archiveArtifacts'
+D, [2023-11-19T12:58:00.744610 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Defaults]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.744747 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.744807 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.744942 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Container]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.745624 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'withCredentials'
+D, [2023-11-19T12:58:00.747786 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'checkout'
+D, [2023-11-19T12:58:00.750044 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'sh'
+D, [2023-11-19T12:58:00.750671 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Failed to locate transformer for 'rtUpload'
+D, [2023-11-19T12:58:00.751422 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'withCredentials'
+D, [2023-11-19T12:58:00.752174 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'sh'
+D, [2023-11-19T12:58:00.762610 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Defaults]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.762834 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.762964 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T12:58:00.763238 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Container]: Failed to locate transformer for 'any'
+D, [2023-11-19T12:58:00.763838 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'echo'
+I, [2023-11-19T12:58:00.767548 #1]  INFO -- : Output file(s):
+I, [2023-11-19T12:58:00.772762 #1]  INFO -- :   output/audit/Build/.github/workflows/build.yml
+I, [2023-11-19T12:58:00.773373 #1]  INFO -- :   output/audit/Build/config.json
+I, [2023-11-19T12:58:00.774413 #1]  INFO -- :   output/audit/Build/jenkinsfile
+I, [2023-11-19T12:58:00.792519 #1]  INFO -- :   output/audit/Deploy/.github/workflows/deploy.yml
+I, [2023-11-19T12:58:00.793787 #1]  INFO -- :   output/audit/Deploy/config.json
+I, [2023-11-19T12:58:00.795796 #1]  INFO -- :   output/audit/Deploy/jenkinsfile
+I, [2023-11-19T12:58:00.805407 #1]  INFO -- :   output/audit/Hello_World/.github/workflows/hello_world.yml
+I, [2023-11-19T12:58:00.807818 #1]  INFO -- :   output/audit/Hello_World/config.json
+I, [2023-11-19T12:58:00.811483 #1]  INFO -- :   output/audit/Hello_World/jenkinsfile
+I, [2023-11-19T12:58:00.937392 #1]  INFO -- :   output/audit/workflow_usage.csv
+I, [2023-11-19T12:58:00.972658 #1]  INFO -- :   output/audit/audit_summary.md
+W, [2023-11-19T12:58:17.722137 #1]  WARN -- : Secrets redacted in file(s):
+W, [2023-11-19T12:58:17.722547 #1]  WARN -- :   output/audit/Build/config.json
+W, [2023-11-19T12:58:17.722732 #1]  WARN -- :   output/audit/Deploy/jenkinsfile
+W, [2023-11-19T12:58:17.722957 #1]  WARN -- :   output/audit/Deploy/config.json
+W, [2023-11-19T12:58:17.723203 #1]  WARN -- :   output/audit/Build/jenkinsfile
+W, [2023-11-19T12:58:17.723400 #1]  WARN -- :   output/audit/log/valet-20231119-125759.log
+I, [2023-11-19T12:58:17.841332 #1]  INFO -- request: GET https://api.github.com/user
+I, [2023-11-19T12:58:18.516016 #1]  INFO -- response: Status 200
+I, [2023-11-19T12:58:18.519376 #1]  INFO -- : Sending telemetry with transaction id '10b407b3-8ac3-44f0-8d97-2c2a21b3e139'

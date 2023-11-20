@@ -1,0 +1,32 @@
+{
+  "flow-definition": {
+    "plugin": "workflow-job@1360.vc6700e3136f5",
+    "actions": [
+      {
+        "org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction": {
+          "plugin": "pipeline-model-definition@2.2151.ve32c9d209a_3f"
+        }
+      },
+      {
+        "org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction": {
+          "plugin": "pipeline-model-definition@2.2151.ve32c9d209a_3f",
+          "jobProperties": null,
+          "triggers": null,
+          "parameters": null,
+          "options": null
+        }
+      }
+    ],
+    "description": null,
+    "keepDependencies": "false",
+    "properties": null,
+    "definition": {
+      "class": "org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition",
+      "plugin": "workflow-cps@3806.va_3a_6988277b_2",
+      "script": "pipeline {\n    agent any \n    stages {\n        stage('Stage 1') {\n            steps {\n                echo 'Hello world!' \n            }\n        }\n    }\n}\n",
+      "sandbox": "true"
+    },
+    "triggers": null,
+    "disabled": "false"
+  }
+}

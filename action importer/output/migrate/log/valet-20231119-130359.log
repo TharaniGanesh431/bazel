@@ -1,0 +1,32 @@
+# Logfile created on 2023-11-19 13:03:59 +0000 by logger.rb/v1.5.3
+I, [2023-11-19T13:03:59.395663 #1]  INFO -- : Using GitHub Features: Defaults
+I, [2023-11-19T13:03:59.396784 #1]  INFO -- request: GET http://localhost:8080/job/Build/config.xml
+I, [2023-11-19T13:03:59.435186 #1]  INFO -- response: Status 200
+I, [2023-11-19T13:03:59.446484 #1]  INFO -- request: POST http://localhost:8080/pipeline-model-converter/toJson
+I, [2023-11-19T13:03:59.481374 #1]  INFO -- response: Status 200
+D, [2023-11-19T13:03:59.483215 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Defaults]: Failed to locate transformer for 'any'
+D, [2023-11-19T13:03:59.483538 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T13:03:59.483698 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-11-19T13:03:59.484465 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Container]: Failed to locate transformer for 'any'
+D, [2023-11-19T13:03:59.485997 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'git'
+D, [2023-11-19T13:03:59.489447 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'sh'
+D, [2023-11-19T13:03:59.489946 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'junit'
+D, [2023-11-19T13:03:59.491171 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::StepTransformer]: Located transformer for 'archiveArtifacts'
+I, [2023-11-19T13:03:59.588063 #1]  INFO -- request: GET https://api.github.com/repos/TharaniGanesh431/bazel
+I, [2023-11-19T13:04:00.241188 #1]  INFO -- response: Status 200
+I, [2023-11-19T13:04:00.261623 #1]  INFO -- request: GET https://api.github.com/repos/TharaniGanesh431/bazel/git/refs/heads/main
+I, [2023-11-19T13:04:00.637364 #1]  INFO -- response: Status 200
+I, [2023-11-19T13:04:00.640490 #1]  INFO -- request: POST https://api.github.com/repos/TharaniGanesh431/bazel/git/refs
+I, [2023-11-19T13:04:01.468590 #1]  INFO -- response: Status 201
+I, [2023-11-19T13:04:01.470974 #1]  INFO -- request: GET https://api.github.com/repos/TharaniGanesh431/bazel/contents/.github/workflows/build.yml?sha=853fab9b827f1bb1f43ed6e06f6c458d7ec55487
+I, [2023-11-19T13:04:02.286990 #1]  INFO -- response: Status 404
+I, [2023-11-19T13:04:02.289794 #1]  INFO -- request: PUT https://api.github.com/repos/TharaniGanesh431/bazel/contents/.github/workflows/build.yml
+I, [2023-11-19T13:04:02.851845 #1]  INFO -- response: Status 201
+I, [2023-11-19T13:04:02.859382 #1]  INFO -- request: POST https://api.github.com/repos/TharaniGanesh431/bazel/pulls
+I, [2023-11-19T13:04:04.052639 #1]  INFO -- response: Status 201
+I, [2023-11-19T13:04:04.062128 #1]  INFO -- : Pull request: 'https://github.com/TharaniGanesh431/bazel/pull/1'
+I, [2023-11-19T13:04:04.064583 #1]  INFO -- request: GET https://api.github.com/user
+I, [2023-11-19T13:04:04.483247 #1]  INFO -- response: Status 200
+I, [2023-11-19T13:04:04.487580 #1]  INFO -- request: GET https://api.github.com/repos/TharaniGanesh431/bazel
+I, [2023-11-19T13:04:04.955152 #1]  INFO -- response: Status 200
+I, [2023-11-19T13:04:04.964305 #1]  INFO -- : Sending telemetry with transaction id '78e8ea6a-ce4f-49c8-af84-c33b569e8a3a'

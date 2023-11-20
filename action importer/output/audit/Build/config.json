@@ -1,0 +1,16 @@
+{
+  "flow-definition": {
+    "plugin": "workflow-job@1360.vc6700e3136f5",
+    "description": null,
+    "keepDependencies": "false",
+    "properties": null,
+    "definition": {
+      "class": "org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition",
+      "plugin": "workflow-cps@3806.va_3a_6988277b_2",
+      "script": "pipeline {\n    agent any\n\n    stages {\n        stage('Build') {\n            steps {\n                git 'REDACTED-maven-project-with-tests.git'\n\n                sh \"mvn -Dmaven.test.failure.ignore=true clean package\"\n\n            }\n\n            post {\n                success {\n                    junit '**/target/surefire-reports/TEST-*.xml'\n                    archiveArtifacts 'target/*.jar'\n                }\n            }\n        }\n    }\n}\n",
+      "sandbox": "true"
+    },
+    "triggers": null,
+    "disabled": "false"
+  }
+}
